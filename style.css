@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&family=My+Soul&family=Updock&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'My Soul', cursive;
+    font-family: 'Updock', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background: linear-gradient(45deg,aqua, white, #DA4453, #89216B, green);
+
+
+}
+
+.container{
+    display: flex;
+    width: 90vw;
+}
+
+.panel{
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 400ms ease-in;
+}
+
+.panel h3{
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    top: 30rem;
+
+
+}
+
+.panel.active{
+    flex: 3;
+    border-radius: 50px;
+    border: 2px solid red;
+}
+
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
+}
+
+@media(max-width: 480px){
+    .container{
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5){
+        display: none;
+    }
+}
